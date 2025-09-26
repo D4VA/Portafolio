@@ -1,11 +1,89 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import AboutMeIcon from "../components/icons/AboutMe.astro";
+import AboutMe from "../components/AboutMe.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Porfolio de Dav - Desarrollador y Programador Web con 4 años de experiencia"
+  description="Contrata a Dav para crear tu aplicación web o móvil. Desarrollador y programadoe web. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://media.licdn.com/dms/image/v2/D4E03AQHpRpsn6FgYzQ/profile-displayphoto-shrink_800_800/B4EZQ.gKfWHEAc-/0/1736215407810?e=1761782400&v=beta&t=urFmPPVIRdnBwM-IqLHu2HZGi_385tSMdMDt5DK-czE"
+        alt="davDev photo"
+      />
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hey, soy Dav
+        <a
+          href="https://www.linkedin.com/in/diego-velasquez-avila/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+4 años de experiencia.</span><span class="text-yellow-200/90">
+          Desarrollador Web.</span
+        >
+        <span class="text-red-200/90"> De Guatemala 🇬🇹.</span>
+        <span class="opacity-85"
+          >Especializado en crear aplicaciones únicas.</span
+        >
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/diego-velasquez-avila/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/D4VA">
+          <GitHubIcon class="size-4 lg:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://github.com/D4VA">
+          <MailIcon class="size-4 lg:size-6" />
+          diegovelasquezavila@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>,
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <AboutMeIcon class="size-7" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
 </Layout>
