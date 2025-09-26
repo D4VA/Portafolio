@@ -71,19 +71,24 @@ import AboutMe from "../components/AboutMe.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+    <SectionContainer id="proyectos" class="gap-y-8 flex flex-col mb-7">
+      <h2 class="text-2xl font-semibold flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
       <Projects />
     </SectionContainer>
-    <SectionContainer id="sobre-mi">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <AboutMeIcon class="size-7" />
-        Sobre mí
-      </h2>
-      <AboutMe />
+    <SectionContainer id="sobre-mi" class="flex flex-row gap-8">
+      <div>
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <AboutMeIcon class="size-7" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </div>
+      <div>
+        <img alt="foto-dev" src="/projects/aboutMe.webp" class="rounded-full h-3xs"/>
+      </div>
     </SectionContainer>
   </main>
 </Layout>
